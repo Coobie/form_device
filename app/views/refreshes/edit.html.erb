@@ -1,0 +1,22 @@
+<h1>Edit</h1><%=@refreshes.device_name %>
+
+
+
+<%= form_for @refreshes do |f| %>
+
+<br><b><%="Name of Device:  "%></b><%=f.text_field :device_name %>
+
+<br><b><%="Model of Device: "%></b><%=f.text_field :device_model %>
+
+<br><b><%="Type of Device: "%></b><%=f.select(:device_type,[['Phone'],['Tablet'],['Laptop']]) %>
+
+<br><b><%="Start Date: "%></b><%=f.text_field :start_date%>
+
+<br><b><%="Expiry Date: "%></b><%=f.text_field :expiry_date%>
+
+<br><%=f.submit "Change" %>
+
+
+<%= link_to('Delete this record', @refreshes,  
+             { :confirm => 'Are you sure?', :method => :delete }) %>
+<% end %>

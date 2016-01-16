@@ -1,0 +1,18 @@
+<h1>New Device</h1>
+<%= form_for :refresh, url: refreshes_path do |f| %>
+  <p>
+    <b><%="Name of Device:  "%></b><%= f.text_field :device_name %>
+  </p>
+   <p>
+    <b><%="Model of Device:  "%></b><%= f.text_field :device_model %>
+  </p>
+    <p>
+    <b><%="Type of Device:  "%></b><%=f.select(:device_type,[['Phone'],['Tablet'],['Laptop']]) %>
+  </p>
+  <p> <%= "The format for the dates is"%> <b><%="YYYY-MM-DD"%></b><p>
+    <p><b><%="Start Date: "%></b><%=f.text_field :start_date%></p>
+	<p><b><%="Expiry Date: "%></b><%=f.text_field :expiry_date%></p>
+   
+    <%= f.submit "Create" %>
+  
+<% end %>

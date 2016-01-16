@@ -1,0 +1,12 @@
+<h1>Showing <%=@refreshes.device_name %> </h1>
+<% time=Time.now %>
+<%=time.strftime("Today is %A %d %B %Y")%>
+<br>
+<br><b><%="Name of Device: "%></b><%=@refreshes.device_name %>
+
+<br><b><%="Type of Device: "%></b><%=@refreshes.device_type %>
+
+<br><b><%="Model of Device: "%></b><%=@refreshes.device_model %>
+<br><b><%="Start Date of Device: "%></b><%=@refreshes.start_date.strftime("%d/%m/%y") %>
+
+<br><b><%="Expiry Date of Device: "%></b><%=@refreshes.expiry_date.strftime( "%d/%m/%y") %>

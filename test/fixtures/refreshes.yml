@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  device_name: MyString
+  device_type: MyString
+  device_model: MyString
+  start_date: 2016-01-16 12:32:19
+  expiry_date: 2016-01-16 12:32:19
+
+two:
+  device_name: MyString
+  device_type: MyString
+  device_model: MyString
+  start_date: 2016-01-16 12:32:19
+  expiry_date: 2016-01-16 12:32:19
