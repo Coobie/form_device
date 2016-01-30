@@ -23,9 +23,13 @@ class RefreshesController < ApplicationController
   end
   def create
   @refreshes = Refresh.new(refresh_params)
- 
-  @refreshes.save
+ if @refreshes.save
+    flash[:notice]="Correct"
   redirect_to :action =>'index'
+else
+    flash[:title]=@refreshes.errors.full_messages.to_sentence
+    render(:action=>'new')
+end
 end
  
 private
