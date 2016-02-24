@@ -11,14 +11,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160116123219) do
+ActiveRecord::Schema.define(version: 20160220190850) do
 
   create_table "refreshes", force: :cascade do |t|
     t.string   "device_name"
     t.string   "device_type"
     t.string   "device_model"
     t.datetime "start_date"
-    t.datetime "expiry_date"
+    t.date     "expiry_date"
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
   end

@@ -1,5 +1,7 @@
+
 Rails.application.routes.draw do
   get 'welcome/index'
+  get 'calendar_page/index'
   get 'refreshes/new', to: 'refreshes#new'
   get 'refreshes/index' => 'refreshes#index', as: :index
   get 'refreshes/:id/edit', to: 'refreshes#edit', as: :editing

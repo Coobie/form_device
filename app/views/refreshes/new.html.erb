@@ -10,8 +10,10 @@
     <b><%="Type of Device:  "%></b><%=f.select(:device_type,[['Phone'],['Tablet'],['Laptop']]) %>
   </p>
   <p> <%= "The format for the dates is"%> <b><%="YYYY-MM-DD"%></b><p>
-    <p><b><%="Start Date: "%></b><%=f.text_field :start_date%></p>
-	<p><b><%="Expiry Date: "%></b><%=f.text_field :expiry_date%></p>
+
+    <p><b><%="Start Date: "%></b><%=f.text_field :start_date,"data-provide"=>'datepicker'%></p>
+
+	<p><b><%="Expiry Date: "%></b><%=f.text_field :expiry_date,"data-provide"=>'datepicker'%></p>
    
     <%= f.submit "Create" %>
   
