@@ -1,5 +1,5 @@
 <h1> Advanced Search </h1>
-
+<br>
 <%= form_for @search do |s| %>
 	<br><%= s.label :keywords %>
 	<br><%= s.text_field :keywords %>
@@ -7,10 +7,17 @@
 	<br><%= s.select :device_type, options_for_select(@device_type), :include_blank => true %>
 	<br><%= s.label :device_model %>
 	<br><%= s.text_field :device_model %>
-	<br><%= s.label :start_date %>
-	<br><%= s.text_field :start_date,"data-provide"=>'datepicker' %>
-	<br><%= s.label :expiry_date  %>
-	<br><%= s.text_field :expiry_date,"data-provide"=>'datepicker' %>
+
+<br><%= "The format for the dates is YYYY-MM-DD" %>
+<br><b><%= "Find Device(s) that started between" %><br></b>
+	<%= s.text_field :start_date,"data-provide"=>'datepicker' %>
+	<b><%="and"%></b> <%= s.text_field :start_datae_min,"data-provide"=>'datepicker' %>
+
+<br>
+
+	<br><b><%= "Find Device(s) that expire between" %><br></b>
+	<%= s.text_field :expiry_date,"data-provide"=>'datepicker' %>
+	<b><%="and"%></b> <%= s.text_field :expiry_date_min,"data-provide"=>'datepicker' %>
 	<br><%= s.submit "Search" %>
 <% end %>
 
