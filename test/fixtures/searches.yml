@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  keywords: MyString
+  device_type: MyString
+  device_model: MyString
+  start_date: 2016-02-25
+  expiry_date: 2016-02-25
+
+two:
+  keywords: MyString
+  device_type: MyString
+  device_model: MyString
+  start_date: 2016-02-25
+  expiry_date: 2016-02-25

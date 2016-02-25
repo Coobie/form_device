@@ -10,3 +10,5 @@
 <br><b><%="Start Date of Device: "%></b><%=@refreshes.start_date.strftime("%d/%m/%y") %>
 
 <br><b><%="Expiry Date of Device: "%></b><%=@refreshes.expiry_date.strftime( "%d/%m/%y") %>
+
+<br><%= link_to "edit this record", edit_refresh_path(@refreshes) %>

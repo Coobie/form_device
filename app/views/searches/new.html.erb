@@ -1,0 +1,17 @@
+<h1> Advanced Search </h1>
+
+<%= form_for @search do |s| %>
+	<br><%= s.label :keywords %>
+	<br><%= s.text_field :keywords %>
+	<br><%= s.label :device_type %>
+	<br><%= s.select :device_type, options_for_select(@device_type), :include_blank => true %>
+	<br><%= s.label :device_model %>
+	<br><%= s.text_field :device_model %>
+	<br><%= s.label :start_date %>
+	<br><%= s.text_field :start_date,"data-provide"=>'datepicker' %>
+	<br><%= s.label :expiry_date  %>
+	<br><%= s.text_field :expiry_date,"data-provide"=>'datepicker' %>
+	<br><%= s.submit "Search" %>
+<% end %>
+
+<%= link_to "Back",refreshes_path %>

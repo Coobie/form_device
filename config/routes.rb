@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   get 'refreshes/show/:id', to: 'refreshes#show'
   get'refreshes/edit/:id' => 'products#destroy', :via => :delete
   
+  resources :searches
   resources :refreshes
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

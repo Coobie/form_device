@@ -1,6 +1,4 @@
-<h1>Edit</h1><%=@refreshes.device_name %>
-
-
+<h1>Editing <%=@refreshes.device_name %> </h1>
 
 <%= form_for @refreshes do |f| %>
 
@@ -11,6 +9,7 @@
 <br><b><%="Type of Device: "%></b><%=f.select(:device_type,[['Phone'],['Tablet'],['Laptop'],['Other']]) %>
 
 <br><b><%="Start Date: "%></b><%=f.text_field :start_date,"data-provide"=>'datepicker'%>
+
 
 <br><b><%="Expiry Date: "%></b><%=f.text_field :expiry_date,"data-provide"=>'datepicker'%>
 
