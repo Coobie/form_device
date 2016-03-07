@@ -1,10 +1,10 @@
 class SearchesController < ApplicationController
-	def new 
+	
+	def new
 		@search = Search.new
 		@device_type = Refresh.uniq.pluck(:device_type)
 	end
 
-	
 	def create
 		@search = Search.create(search_params)
 		redirect_to @search

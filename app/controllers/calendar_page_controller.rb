@@ -4,6 +4,4 @@ class CalendarPageController < ApplicationController
 		@refreshes_by_date = @refreshes.group_by(&:expiry_date)
 		@date = params[:date] ? Date.parse(params[:date]) : Date.today
 	end
-
-
 end

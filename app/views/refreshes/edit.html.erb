@@ -8,6 +8,7 @@
 
 <br><b><%="Type of Device: "%></b><%=f.select(:device_type,[['Phone'],['Tablet'],['Laptop'],['Other']]) %>
 
+<br><b><%="Price of original device: "%></b><%=f.number_field :original_price, :step => "0.01" %>
 <br><b><%="Start Date: "%></b><%=f.text_field :start_date,"data-provide"=>'datepicker'%>
 
 
@@ -16,6 +17,6 @@
 <br><%=f.submit "Change" %>
 
 
-<%= link_to('Delete this record', @refreshes,  
+<%= link_to('Delete this record', @refreshes,
              { :confirm => 'Are you sure?', :method => :delete }) %>
 <% end %>

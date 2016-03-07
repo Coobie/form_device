@@ -1,7 +1,7 @@
 <h1> Advanced Search </h1>
 <br>
 <%= form_for @search do |s| %>
-	<br><%= s.label :keywords %>
+	<br><b><%= "Device name"%></b>
 	<br><%= s.text_field :keywords %>
 	<br><%= s.label :device_type %>
 	<br><%= s.select :device_type, options_for_select(@device_type), :include_blank => true %>
@@ -22,3 +22,4 @@
 <% end %>
 
 <%= link_to "Back",refreshes_path %>
+#fff000

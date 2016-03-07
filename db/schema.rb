@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160225102002) do
+ActiveRecord::Schema.define(version: 20160306125556) do
 
   create_table "refreshes", force: :cascade do |t|
     t.string   "device_name"
@@ -19,8 +19,9 @@ ActiveRecord::Schema.define(version: 20160225102002) do
     t.string   "device_model"
     t.datetime "start_date"
     t.date     "expiry_date"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
+    t.datetime "created_at",                              null: false
+    t.datetime "updated_at",                              null: false
+    t.decimal  "original_price", precision: 10, scale: 2
   end
 
   create_table "searches", force: :cascade do |t|

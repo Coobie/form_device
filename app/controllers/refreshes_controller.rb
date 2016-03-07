@@ -19,7 +19,7 @@ class RefreshesController < ApplicationController
   	redirect_to :action =>'index'
   end
   def refresh_params
-  	params.require(:refresh).permit(:device_name,:device_type,:device_model,:start_date,:expiry_date)
+  	params.require(:refresh).permit(:device_name,:device_type,:device_model,:start_date,:expiry_date,:original_price)
   end
   def create
   @refreshes = Refresh.new(refresh_params)
@@ -31,9 +31,9 @@ else
     render(:action=>'new')
 end
 end
- 
+
 private
   def refresh_params
-    params.require(:refresh).permit(:device_name,:device_type,:device_model,:start_date,:expiry_date)
+    params.require(:refresh).permit(:device_name,:device_type,:device_model,:start_date,:expiry_date, :original_price)
 end
 end

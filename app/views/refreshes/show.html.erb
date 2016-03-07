@@ -7,8 +7,14 @@
 <br><b><%="Type of Device: "%></b><%=@refreshes.device_type %>
 
 <br><b><%="Model of Device: "%></b><%=@refreshes.device_model %>
+<br><b><%="Orignial price of device: "%></b><%=number_to_currency(@refreshes.original_price,:unit => "£")%>
 <br><b><%="Start Date of Device: "%></b><%=@refreshes.start_date.strftime("%d/%m/%y") %>
 
 <br><b><%="Expiry Date of Device: "%></b><%=@refreshes.expiry_date.strftime( "%d/%m/%y") %>
 
 <br><%= link_to "edit this record", edit_refresh_path(@refreshes) %>
+
+<br><% a = time %>
+<% b = @refreshes.expiry_date %>
+<% life_time = b - @refreshes.start_date %>
+<%= "#{life_time/60/60/24}" %>
