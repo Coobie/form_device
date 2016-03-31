@@ -1,5 +1,6 @@
 
 Rails.application.routes.draw do
+devise_for :users, :controllers => { registrations: 'registrations' }
   get 'welcome/index'
   get 'calendar_page/index'
   get 'refreshes/new', to: 'refreshes#new'
@@ -7,9 +8,10 @@ Rails.application.routes.draw do
   get 'refreshes/:id/edit', to: 'refreshes#edit', as: :editing
   get 'refreshes/show/:id', to: 'refreshes#show'
   get'refreshes/edit/:id' => 'products#destroy', :via => :delete
-  
+  get 'users/edit_password'
   resources :searches
   resources :refreshes
+  resources :users
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

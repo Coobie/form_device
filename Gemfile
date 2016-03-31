@@ -33,6 +33,9 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # gem 'capistrano-rails', group: :development
 gem 'bootstrap-sass'
 gem 'bootstrap-datepicker-rails'
+gem 'devise'
+gem 'devise_roles'
+gem 'pundit'
 group :development, :test do
   gem 'rails_layout'
 
