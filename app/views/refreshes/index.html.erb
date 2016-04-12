@@ -4,8 +4,9 @@
 <%= "📱"%> <%="💻"%> <%="⌨"%> <%="🖥" %>
 
 <% @refrehes.each do |n| %>
-	<li> <%= link_to "#{n.device_name}",refresh_path(n) %> <%=  " | " + n.device_type %> 
+	<li> <%= link_to "#{n.device_name}",refresh_path(n) %> <%=  " | " + n.device_type %>
 	<%= link_to "edit", edit_refresh_path(n) %>
 	<%= link_to "show",refresh_path(n) %>
+	<%= link_to "#{n.user.first_name}",user_path(n.user_id) %>
 	</li>
 <% end %>

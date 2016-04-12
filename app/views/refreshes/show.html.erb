@@ -1,10 +1,13 @@
 <h1>Showing <%=@refreshes.device_name %> </h1>
+
+<br><b><%="The owner of the device is: "%></b>	<%= link_to "#{@refreshes.user.first_name}",user_path(@refreshes.user_id) %>
+<%= link_to "#{@refreshes.user.last_name}",user_path(@refreshes.user_id) %>
+<br><b><%="The owner has an id of: "%></b><%= @refreshes.user_id %>
 <% time= DateTime.now %>
 <% time2 = time.strftime("%Y-%m-%d")%>
-<%= time2 %>
+<% time2 %>
 <br>
 <br><b><%="Name of Device: "%></b><%=@refreshes.device_name %>
-
 <br><b><%="Type of Device: "%></b><%=@refreshes.device_type %>
 
 <br><b><%="Model of Device: "%></b><%=@refreshes.device_model %>

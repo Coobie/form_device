@@ -20,7 +20,7 @@ before_action :authenticate_user!
   	redirect_to :action =>'index'
   end
   def refresh_params
-  	params.require(:refresh).permit(:device_name,:device_type,:device_model,:start_date,:expiry_date,:original_price)
+  	params.require(:refresh).permit(:device_name,:device_type,:device_model,:user_id,:start_date,:expiry_date,:original_price)
   end
   def create
   @refreshes = Refresh.new(refresh_params)
@@ -35,6 +35,6 @@ end
 
 private
   def refresh_params
-    params.require(:refresh).permit(:device_name,:device_type,:device_model,:start_date,:expiry_date, :original_price)
+    params.require(:refresh).permit(:device_name,:device_type,:device_model,:user_id,:start_date,:expiry_date, :original_price)
 end
 end
