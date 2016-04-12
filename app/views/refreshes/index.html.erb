@@ -1,12 +1,22 @@
 <h1>Refreshes#index</h1>
+<%=link_to 'New Device',('../refreshes/new')%>
 <p>Find me in app/views/refreshes/index.html.erb</p>
 <%= link_to "Advanced Search", new_search_path %>
 <%= "📱"%> <%="💻"%> <%="⌨"%> <%="🖥" %>
 
-<% @refrehes.each do |n| %>
-	<li> <%= link_to "#{n.device_name}",refresh_path(n) %> <%=  " | " + n.device_type %>
-	<%= link_to "edit", edit_refresh_path(n) %>
-	<%= link_to "show",refresh_path(n) %>
-	<%= link_to "#{n.user.first_name}",user_path(n.user_id) %>
-	</li>
+<table class="table1" >
+	<tr>
+		<th>Device Name  </th>
+		<th>Device Owner  </th>
+		<th>Device Type  </th>
+		<th>Edit  </th>
+
+	</tr>
+<% @refreshes.each do |n| %>
+	<td><%= link_to "#{n.device_name}",refresh_path(n) %> </td>
+	<td><%= link_to "#{n.user.first_name}",user_path(n.user_id) %></td>
+	<td><%= n.device_type %> </td>
+	<td><%= link_to "Edit ", edit_refresh_path(n) %></td>
+</tr>
 <% end %>
+</table>

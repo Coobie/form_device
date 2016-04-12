@@ -1,3 +1,23 @@
-// Place all the styles related to the Refreshes controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.table1 {
+  border-collapse: collapse;
+  width: 30%;
+}
+th {
+  height: 30px;
+  vertical-align: bottom;
+  background-color: #595856;
+  color: white;
+}
+td{
+  border-bottom:  1px solid #B1B1B1;
+  padding: 2px;
+}
+tr:nth-child(even) {background-color: #C7C9C9;
+}
+tr:hover {
+  background-color: #f5f5f5;
+}
+
+.table2 {
+  
+}

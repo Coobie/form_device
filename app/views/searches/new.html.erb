@@ -4,7 +4,7 @@
 	<br><b><%= "Device name"%></b>
 	<br><%= s.text_field :keywords %>
 	<br><%= s.label :device_type %>
-	<br><%= s.select :device_type, options_for_select(@device_type), :include_blank => true %>
+	<br><%= s.select :device_type,options_for_select(@device_type), :include_blank => true %>
 	<br><%= s.label :device_model %>
 	<br><%= s.text_field :device_model %>
 

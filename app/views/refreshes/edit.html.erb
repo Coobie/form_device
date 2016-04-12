@@ -9,12 +9,16 @@
 <br><b><%="Type of Device: "%></b><%=f.select(:device_type,[['Phone'],['Tablet'],['Laptop'],['Other']]) %>
 
 <br><b><%="Price of original device: "%></b><%=f.number_field :original_price, :step => "0.01" %>
+
+<br><b><%="User ID: "%></b><%= f.collection_select :user_id, User.all, :id, :user_id_name  %>
+
 <br><b><%="Start Date: "%></b><%=f.text_field :start_date,"data-provide"=>'datepicker'%>
 
 
 <br><b><%="Expiry Date: "%></b><%=f.text_field :expiry_date,"data-provide"=>'datepicker'%>
-<br><b><%="User ID: "%></b><%=f.text_field :user_id %>
+
 <br><%=f.submit "Change" %>
+
 
 
 <%= link_to('Delete this record', @refreshes,

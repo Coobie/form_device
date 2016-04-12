@@ -5,4 +5,5 @@ class Refresh < ActiveRecord::Base
 	validates :device_type, presence: {message:"Device Type is missing"}
 	validates :device_model, presence: {message:"Device Model is missing"}
 belongs_to :user
+
 end

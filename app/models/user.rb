@@ -5,6 +5,13 @@ class User < ActiveRecord::Base
 
   def set_default_role
   end
+
+  def user_id_name
+    "#{id} #{first_name} #{last_name}"
+  end
+  def full_name
+    "#{first_name} #{last_name}"
+  end
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,

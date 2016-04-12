@@ -1,13 +1,14 @@
 class RefreshesController < ApplicationController
 before_action :authenticate_user!
   def index
-  	@refrehes = Refresh.all
+  	@refreshes = Refresh.all
   end
   def show
   	@refreshes = Refresh.find(params[:id])
   end
   def edit
   	@refreshes = Refresh.find(params[:id])
+
   end
   def update
   	@refreshes = Refresh.find(params[:id])
