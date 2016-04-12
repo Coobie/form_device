@@ -1,0 +1,17 @@
+<h1>Editing the account for <%=@user.first_name %> </h1>
+
+<%= form_for @user do |u| %>
+
+<br><b><%="First name:  "%></b><%=u.text_field :first_name %>
+<br><b><%="Last name:  "%></b><%=u.text_field :last_name %>
+<br><b><%="Email address:  "%></b><%=u.text_field :email%>
+<br><b><%="Office location:  "%></b><%=u.text_field :office_location %>
+<br><b><%="Role of user :  "%></b><%=u.text_field :role %>
+
+
+<br><%=u.submit "Change" %>
+
+
+<%= link_to('Delete this record', @user,
+             { :confirm => 'Are you sure?', :method => :delete }) %>
+<% end %>

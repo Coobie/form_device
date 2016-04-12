@@ -1,4 +1,5 @@
 class RefreshesController < ApplicationController
+before_action :authenticate_user!
   def index
   	@refrehes = Refresh.all
   end

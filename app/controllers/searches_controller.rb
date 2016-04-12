@@ -1,5 +1,5 @@
 class SearchesController < ApplicationController
-	
+	before_action :authenticate_user!
 	def new
 		@search = Search.new
 		@device_type = Refresh.uniq.pluck(:device_type)

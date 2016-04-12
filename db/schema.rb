@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160322180731) do
+ActiveRecord::Schema.define(version: 20160412112543) do
 
   create_table "refreshes", force: :cascade do |t|
     t.string   "device_name"
@@ -50,9 +50,10 @@ ActiveRecord::Schema.define(version: 20160322180731) do
     t.string   "first_name"
     t.string   "last_name"
     t.string   "office_location"
-    t.string   "role"
+    t.integer  "role",                   default: 0
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false
+    t.integer  "access_level"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true

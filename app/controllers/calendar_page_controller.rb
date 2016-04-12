@@ -1,4 +1,5 @@
 class CalendarPageController < ApplicationController
+	before_action :authenticate_user!
 	def index
 		@refreshes = Refresh.all
 		@refreshes_by_date = @refreshes.group_by(&:expiry_date)

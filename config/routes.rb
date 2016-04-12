@@ -3,6 +3,11 @@ Rails.application.routes.draw do
 devise_for :users, :controllers => { registrations: 'registrations' }
   get 'welcome/index'
   get 'calendar_page/index'
+  get 'users/index'
+  get 'users/:id/edit', to: 'users#edit', as: :editing_user
+  get 'users/show/:id', to: 'users#show'
+  get'users/edit/:id' => 'products#destroy', :via => :delete
+
   get 'refreshes/new', to: 'refreshes#new'
   get 'refreshes/index' => 'refreshes#index', as: :index
   get 'refreshes/:id/edit', to: 'refreshes#edit', as: :editing
